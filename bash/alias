@@ -1,0 +1,35 @@
+# alias submit2test="fab -f /Users/charlesmurphy/Desktop/basepair-bitbucket/webapp/www/fabfile.py -H test deploy:local_root=~/Desktop/basepair-bitbucket/"
+
+# alias submit2charlie="fab -r ~/Desktop/basepair-bitbucket/webapp/www/ -H charlie deploy --domain=https://charlie.basepairtech.com --remote-branch="
+
+
+# alias submit2test="fab -r ~/Desktop/basepair-bitbucket/webapp/www/ -H test deploy --domain=https://test.basepairtech.com --remote-branch="
+
+# alias submit2prod="fab -r ~/Desktop/basepair-bitbucket/webapp/www/ -H prod deploy --domain=https://app.basepairtech.com --remote-branch=default"
+
+alias awss="cp ~/.ssh/config_persistent ~/.ssh/config && ~/Dropbox/Code/aws-servers.py -c ~/.aws/config.json -a >> ~/.ssh/config"
+
+
+alias pypi='python setup.py sdist && twine upload dist/* && rm -rf dist/*'
+alias whatis='man -k'
+alias df='df -h'
+alias du='du -sh'
+alias ll='ls -lhog'
+alias rm='rm -i'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias gr='grep -rnw'
+alias jl='jupyter lab'
+alias gits='git status'
+alias gita='git add'
+alias gitc='git commit'
+alias gitpl='git pull'
+alias gitps='git push'
+alias gitm='git merge'
+alias gitdf='git diff'
+
+alias dr='python manage.py runserver'
+alias dmk='python manage.py makemigrations'
+alias dm='python manage.py migrate'
+alias ds='python manage.py shell'
+alias pips='pipenv shell' 
