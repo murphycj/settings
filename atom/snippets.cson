@@ -19,3 +19,52 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.source.python':
+  'Hydrogen new cell':
+    'prefix': 'hcell'
+    'body': '# %% codecell'
+  'Hydrogen new markdown cell':
+    'prefix': 'hmark'
+    'body': '# %% md'
+  'import pandas':
+    'prefix': 'imp'
+    'body': 'import pandas as pd'
+  'import numpy':
+    'prefix': 'imn'
+    'body': 'import numpy as np'
+  'import matplotlib':
+    'prefix': 'imm'
+    'body': 'import matplotlib.pyplot as plt'
+  'import plotly px':
+    'prefix': 'implx'
+    'body': 'import plotly.express as px'
+  'import plotly go':
+    'prefix': 'implg'
+    'body': 'import plotly.graph_objects as go'
+  'plotly figure':
+    'prefix': 'plfig'
+    'body': 'fig = go.Figure()'
+  'plotly figure scatter':
+    'prefix': 'plsc'
+    'body': 'fig.add_trace(go.Scatter(\n\tx=random_x,\n\ty=random_y0,\n\tmode=\'markers\',\n\tname=\'\')\n)'
+  'plotly figure hist':
+    'prefix': 'plhi'
+    'body': 'fig.add_trace(go.Histogram(\n\tx=random_x,\n\tname=\'\')\n)'
+
+'.source.css':
+  '@media-sm':
+      'prefix': 'med-sm'
+      'body': '@media (min-width: 640px) {\n  $2\n}'
+  '@media-md':
+      'prefix': 'med-md'
+      'body': '@media (min-width: 768px) {\n  $2\n}'
+  '@media-lg':
+      'prefix': 'med-lg'
+      'body': '@media (min-width: 1024px) {\n  $2\n}'
+  '@media-xl':
+      'prefix': 'med-xl'
+      'body': '@media (min-width: 1280px) {\n  $2\n}'
+  '@media-2xl':
+      'prefix': 'med-2xl'
+      'body': '@media (min-width: 1536px) {\n  $2\n}'
