@@ -23,48 +23,83 @@
 '.source.python':
   'Hydrogen new cell':
     'prefix': 'hcell'
-    'body': '# %% codecell'
+    'body': '# %% codecell\n'
   'Hydrogen new markdown cell':
     'prefix': 'hmark'
-    'body': '# %% md'
+    'body': '# %% md\n'
   'import pandas':
     'prefix': 'imp'
-    'body': 'import pandas as pd'
+    'body': 'import pandas as pd\n'
   'import numpy':
     'prefix': 'imn'
-    'body': 'import numpy as np'
+    'body': 'import numpy as np\n'
   'import matplotlib':
     'prefix': 'imm'
-    'body': 'import matplotlib.pyplot as plt'
+    'body': 'import matplotlib.pyplot as plt\n'
   'import plotly px':
     'prefix': 'implx'
-    'body': 'import plotly.express as px'
+    'body': 'import plotly.express as px\n'
   'import plotly go':
     'prefix': 'implg'
-    'body': 'import plotly.graph_objects as go'
+    'body': 'import plotly.graph_objects as go\n'
   'plotly figure':
     'prefix': 'plfig'
-    'body': 'fig = go.Figure()'
+    'body': 'fig = go.Figure()\n'
   'plotly figure scatter':
     'prefix': 'plsc'
-    'body': 'fig.add_trace(go.Scatter(\n\tx=random_x,\n\ty=random_y0,\n\tmode=\'markers\',\n\tname=\'\')\n)'
+    'body': 'fig.add_trace(go.Scatter(\n\tx=$1,\n\ty=$2,\n\tmode=\'markers\',\n\tname=\'$3\')\n)\n'
+  'plotly figure barplot':
+    'prefix': 'plbp'
+    'body': 'fig.add_trace(go.Bar(\n\tx=$1,\n\ty=$2,\n\tname=\'$3\')\n)\n'
   'plotly figure hist':
     'prefix': 'plhi'
-    'body': 'fig.add_trace(go.Histogram(\n\tx=random_x,\n\tname=\'\')\n)'
+    'body': 'fig.add_trace(go.Histogram(\n\tx=$1,\n\tname=\'$2\')\n)'
+  'argparser':
+    'prefix': 'argp'
+    'body': 'parser = argparse.ArgumentParser(description=\'$1\')\n$2\nargs = parser.parse_args()\n'
+  'argparser general arg':
+    'prefix': 'argpg'
+    'body': 'parser.add_argument(\'-$1\', \'--$2\', type=$3, help=\'$4\')\n'
+  'argparser bool arg':
+    'prefix': 'argpb'
+    'body': 'parser.add_argument(\'-$1\', \'--$2\', action=\'store_true\', help=\'$3\')\n'
+  'command line tool':
+    'prefix': 'cli'
+    'body': '''
+      #!/usr/bin/env python
+
+      import argparse
+
+
+      def parse_args():
+      \tparser = argparse.ArgumentParser(description=\'\')
+      \t$1
+      \targs = parser.parse_args()
+
+      \treturn args
+
+
+      def main():
+      \targs = parse_args()
+
+
+      if __name__ == '__main__':
+      \tmain()
+    '''
 
 '.source.css':
   '@media-sm':
       'prefix': 'med-sm'
-      'body': '@media (min-width: 640px) {\n  $2\n}'
+      'body': '@media (min-width: 640px) {\n  $2\n}\n'
   '@media-md':
       'prefix': 'med-md'
-      'body': '@media (min-width: 768px) {\n  $2\n}'
+      'body': '@media (min-width: 768px) {\n  $2\n}\n'
   '@media-lg':
       'prefix': 'med-lg'
-      'body': '@media (min-width: 1024px) {\n  $2\n}'
+      'body': '@media (min-width: 1024px) {\n  $2\n}\n'
   '@media-xl':
       'prefix': 'med-xl'
-      'body': '@media (min-width: 1280px) {\n  $2\n}'
+      'body': '@media (min-width: 1280px) {\n  $2\n}\n'
   '@media-2xl':
       'prefix': 'med-2xl'
-      'body': '@media (min-width: 1536px) {\n  $2\n}'
+      'body': '@media (min-width: 1536px) {\n  $2\n}\n'
