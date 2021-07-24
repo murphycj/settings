@@ -34,6 +34,10 @@
 'atom-text-editor':
   'cmd-e': 'editor:select-word'
   'shift-cmd-j': 'pretty-json:prettify'
+  'alt-shift-enter': 'hydrogen:run-cell-and-move-down'
+  'alt-i': 'hydrogen:toggle-inspector'
+  'ctrl-cmd-enter': 'hydrogen:run-all'
+  'ctrl-shift-cmd-enter': 'hydrogen:run'
 
 'body':
   'ctrl-space left': 'window:focus-pane-on-left'
