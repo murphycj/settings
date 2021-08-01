@@ -38,6 +38,7 @@
   'alt-i': 'hydrogen:toggle-inspector'
   'ctrl-cmd-enter': 'hydrogen:run-all'
   'ctrl-shift-cmd-enter': 'hydrogen:run'
+  'ctrl-cmd-d': 'editor:delete-line'
 
 'body':
   'ctrl-space left': 'window:focus-pane-on-left'
