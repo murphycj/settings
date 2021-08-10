@@ -1,12 +1,3 @@
-# alias submit2test="fab -f /Users/charlesmurphy/Desktop/basepair-bitbucket/webapp/www/fabfile.py -H test deploy:local_root=~/Desktop/basepair-bitbucket/"
-
-# alias submit2charlie="fab -r ~/Desktop/basepair-bitbucket/webapp/www/ -H charlie deploy --domain=https://charlie.basepairtech.com --remote-branch="
-
-
-# alias submit2test="fab -r ~/Desktop/basepair-bitbucket/webapp/www/ -H test deploy --domain=https://test.basepairtech.com --remote-branch="
-
-# alias submit2prod="fab -r ~/Desktop/basepair-bitbucket/webapp/www/ -H prod deploy --domain=https://app.basepairtech.com --remote-branch=default"
-
 alias awss="cp ~/.ssh/config_persistent ~/.ssh/config && ~/Dropbox/Code/aws-servers.py -c ~/.aws/config.json -a >> ~/.ssh/config"
 
 
