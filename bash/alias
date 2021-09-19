@@ -22,6 +22,8 @@ alias gtl='git log'
 alias gtclean='git checkout -- '
 alias gtb='git branch'
 
+alias aws_ec2_describe='aws ec2 describe-instances --query "Reservations[*].Instances[*].{PublicIP:PublicIpAddress,Type:InstanceType,Name:Tags[?Key=='Name']|[0].Value,Status:State.Name}" --output table'
+
 alias dr='python manage.py runserver'
 alias dmk='python manage.py makemigrations'
 alias dm='python manage.py migrate'
